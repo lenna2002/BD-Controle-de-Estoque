@@ -10,15 +10,15 @@ CREATE TABLE produtos (
 SELECT * FROM produtos;
 
 INSERT INTO produtos (codigo_produto, nome_produto, descricao, preco, quantidade_estoque, perecivel)
-VALUES (
+VALUES 
 	(1, 'Sabão em pó', 'Sabão em pó de 1kg', 12.00, 10, TRUE),
 	(2, 'Leite em pó', 'Leite em pó desnatado de 220g', 4.90, 25, TRUE),
 	(3, 'Leite em pó', 'Leite em pó instantâneo de 800g', 25.90, 20, TRUE),
 	(4, 'Biscoito de chocolate', 'Biscoito recheado Vitarela de chocolate 130g', 1.90, 50, TRUE),
 	(5, 'Arroz branco', 'Arroz branco 1kg', 4.90, 25, TRUE),
 	(6, 'Feijão preto', 'Feijão preto 1kg', 6.85, 25, TRUE),
-	(7, 'Leite em pó', 'Leite em pó desnatado de 400g', 4.90, 25, TRUE),
-)
+	(7, 'Leite em pó', 'Leite em pó desnatado de 400g', 4.90, 25, TRUE)
+
 
 SELECT * FROM produtos;
 
