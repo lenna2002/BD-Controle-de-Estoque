@@ -4,25 +4,40 @@ CREATE TABLE produtos (
 	descricao TEXT NULL,
 	preco NUMERIC CHECK(preco > 0) NOT NULL,
 	quantidade_estoque SMALLINT DEFAULT 0,
-	perecivel BOOLEAN NOT NULL,
-	validade DATE CHECK(perecivel = true)
+	perecivel BOOLEAN NOT NULL
 )
 
-INSERT INTO produtos (
-	codigo_produto,
-	nome_produto,
-	descricao,
-	preco,
-	quantidade_estoque,
-	perecivel,
-	validade
-)
+SELECT * FROM produtos;
+
+INSERT INTO produtos (codigo_produto, nome_produto, descricao, preco, quantidade_estoque, perecivel)
 VALUES (
-	9709,
-	'Panela',
-	'Panela de aço.',
-	120.89,
-	10,
-	true,
-	'2022-02-02'
+	(1, 'Sabão em pó', 'Sabão em pó de 1kg', 12.00, 10, TRUE),
+	(2, 'Leite em pó', 'Leite em pó desnatado de 220g', 4.90, 25, TRUE),
+	(3, 'Leite em pó', 'Leite em pó instantâneo de 800g', 25.90, 20, TRUE),
+	(4, 'Biscoito de chocolate', 'Biscoito recheado Vitarela de chocolate 130g', 1.90, 50, TRUE),
+	(5, 'Arroz branco', 'Arroz branco 1kg', 4.90, 25, TRUE),
+	(6, 'Feijão preto', 'Feijão preto 1kg', 6.85, 25, TRUE),
+	(7, 'Leite em pó', 'Leite em pó desnatado de 400g', 4.90, 25, TRUE),
 )
+
+SELECT * FROM produtos;
+
+INSERT INTO produtos 
+(codigo_produto, nome_produto, descricao, preco, quantidade_estoque, perecivel)
+VALUES
+	(8, 'Detergente', 'Detergente de coco 200g', 3.40, 100, TRUE),
+	(9, 'Leite condensado', 'Leite condensado semidesnatado de 95g', 5.20, 42, TRUE),
+	(10, 'Desinfetante', 'Desinfetante de eucalipto 1l', 7.80, 34, TRUE);
+
+SELECT * FROM produtos;
+
+UPDATE produtos
+SET preco = 11.20
+WHERE codigo_produto = 1;
+
+UPDATE produtos
+SET descricao = 'Detergente neutro 500ml'
+WHERE codigo_produto = 8;
+
+SELECT * FROM produtos;
+
