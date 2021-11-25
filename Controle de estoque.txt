@@ -1,0 +1,28 @@
+CREATE TABLE produtos (
+	codigo_produto INT PRIMARY KEY,
+	nome_produto VARCHAR(40) NOT NULL,
+	descricao TEXT NULL,
+	preco NUMERIC CHECK(preco > 0) NOT NULL,
+	quantidade_estoque SMALLINT DEFAULT 0,
+	perecivel BOOLEAN NOT NULL,
+	validade DATE CHECK(perecivel = true)
+)
+
+INSERT INTO produtos (
+	codigo_produto,
+	nome_produto,
+	descricao,
+	preco,
+	quantidade_estoque,
+	perecivel,
+	validade
+)
+VALUES (
+	9709,
+	'Panela',
+	'Panela de aço.',
+	120.89,
+	10,
+	true,
+	'2022-02-02'
+)
