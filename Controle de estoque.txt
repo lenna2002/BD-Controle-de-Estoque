@@ -41,3 +41,18 @@ WHERE codigo_produto = 8;
 
 SELECT * FROM produtos;
 
+SELECT nome_produto, preco FROM produtos
+ORDER BY preco;
+
+SELECT codigo_produto, nome_produto, preco FROM produtos
+ORDER BY codigo_produto
+LIMIT 5;
+
+SELECT codigo_produto, nome_produto, preco, quantidade_estoque 
+FROM produtos
+WHERE quantidade_estoque < 20;
+
+DELETE FROM produtos
+WHERE codigo_produto = 5;
+
+SELECT * FROM produtos;
